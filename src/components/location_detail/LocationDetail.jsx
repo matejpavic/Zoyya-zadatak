@@ -1,5 +1,7 @@
 import React from 'react';
 import './LocationDetail.scss';
+import facebookLogo from '../../assets/facebook.svg';
+import instagramLogo from '../../assets/instagram.svg';
 
 function LocationDetail({setSelectedLocation, selectedLocation}) {
     return (
@@ -25,6 +27,7 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                         <h3>Contact</h3>
                         <div><span style={{fontWeight: 'bold'}}>Email: </span> <span>{selectedLocation.email}</span></div>
                         <div><span style={{fontWeight: 'bold'}}>Cell: </span><span>{selectedLocation.phone}</span></div>
+                        <div><span style={{fontWeight: 'bold'}}>Website: </span><span>https://www.zoyya.com/</span></div>
                     </div>
                 {/* </div> */}
                 <div className='details__working-hours'>
@@ -33,14 +36,14 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                     {
                         selectedLocation.workShifts[0].openHours.map(every => {
                             return (
-                                <div>
+                                <div className='time'>
                                     <span>{every.dayName}</span>
                                     {
                                         !every.dayOff ?
-                                        <>
+                                        <div>
                                             <span> {every.startTime}</span>
                                             <span> - {every.endTime}</span>
-                                        </>
+                                        </div>
                                         :
                                         !!every.dayOff ?
                                             <span> NOT WORKING</span>
@@ -54,9 +57,15 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                     </div>
                 </div>
             {/* </div> */}
-            <div className='details__links'></div>
+            <div className='details__links'>
+                <img src={facebookLogo}/>
+                <img src={instagramLogo}/>
+            </div>
             <div className='details__team'>
                 <h3>Our team</h3>
+                <div>
+                    {}
+                </div>
             </div>
             {/* <div>
                 {selectedLocation.name}

@@ -9,7 +9,7 @@
     "contact contact hours"
     "links links links"
     "team team team";
-  grid-template-rows: 300px 200px 200px 100px 150px;
+  grid-template-rows: 300px 200px 150px 100px 150px;
   grid-template-columns: 1fr 1fr 1fr;
   &__card {
     grid-area: card;
@@ -60,9 +60,24 @@
   &__links {
     grid-area: links;
     background-color: yellow;
+    display: flex;
+    align-items: center;
+    padding-left: 2.5%;
+    img {
+      width: 5%;
+      margin-right: 10px;
+      cursor: pointer;
+    }
   }
   &__team {
     grid-area: team;
     background-color: brown;
   }
+}
+
+.time {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15%;
 }
