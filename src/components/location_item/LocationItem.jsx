@@ -2,13 +2,15 @@ import React from 'react';
 import './LocationItem.scss';
 
 
-function LocationItem({ name, address, imageUrl }) {
+function LocationItem({ name, address, imageUrl, category }) {
     return (
-        <div>
-            <img src={imageUrl} alt='location' />
-            <h1>
-                {name}
-            </h1>
+        <div className='item'>
+            <div className='image' style={{backgroundImage: `url(${imageUrl})`}}  />
+            <div className='description' >
+                <div className='category'>{category}</div>
+                <div className='name'>{name}</div>
+                <div className='address'>{address}</div>
+            </div>
         </div>
     );
 }

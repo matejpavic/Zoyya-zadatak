@@ -5,7 +5,7 @@ import LocationItem from '../location_item/LocationItem';
 
 function LocationList({selectedLocation, setSelectedLocation, locations}) {
     return (
-        <div>
+        <div className='wrapper'>
             {
                 locations.map(location => {
                     return (
@@ -13,6 +13,7 @@ function LocationList({selectedLocation, setSelectedLocation, locations}) {
                             <LocationItem
                             name={location.name}
                             imageUrl={location.imageUrl}
+                            category={location.category}
                             address = {location.address}
                             selectedLocation={selectedLocation}
                             />                

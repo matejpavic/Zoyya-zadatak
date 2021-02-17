@@ -1,3 +1,34 @@
-img {
-  width: 100px;
+.item {
+  height: 250px;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5%;
+  overflow: hidden;
+  .image {
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0 0 5%;
+    align-items: flex-start;
+    .category {
+      // height: 40%;
+      font-size: 60%;
+      color: blue;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 80%;
+    }
+    .address {
+      font-size: 70%;
+    }
+  }
 }
