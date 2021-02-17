@@ -1,0 +1,43 @@
+.details {
+  margin: 3% 5% 0 5%;
+  background-color: red;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "card pic pic "
+    "about  about hours"
+    "contact contact hours"
+    "links links links"
+    "team team team";
+  grid-template-rows: 300px 200px 200px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  &__card {
+    grid-area: card;
+    background-color: blue;
+  }
+  &__image {
+    grid-area: pic;
+    background-size: cover;
+    background-position: center;
+  }
+  &__about {
+    grid-area: about;
+    background-color: rgb(0, 255, 229);
+  }
+  &__contact-info {
+    grid-area: contact;
+    background-color: green;
+  }
+  &__hours {
+    grid-area: hours;
+    background-color: rgb(142, 119, 153);
+  }
+  &__links {
+    grid-area: links;
+    background-color: yellow;
+  }
+  &__team {
+    grid-area: team;
+    background-color: brown;
+  }
+}
