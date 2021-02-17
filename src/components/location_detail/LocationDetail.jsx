@@ -29,6 +29,29 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                 {/* </div> */}
                 <div className='details__working-hours'>
                     <h3>Working hours</h3>
+                    <div>
+                    {
+                        selectedLocation.workShifts[0].openHours.map(every => {
+                            return (
+                                <div>
+                                    <span>{every.dayName}</span>
+                                    {
+                                        !every.dayOff ?
+                                        <>
+                                            <span> {every.startTime}</span>
+                                            <span> - {every.endTime}</span>
+                                        </>
+                                        :
+                                        !!every.dayOff ?
+                                            <span> NOT WORKING</span>
+                                        :
+                                        null
+                                    }
+                                </div>
+                            )
+                        })
+                    }
+                    </div>
                 </div>
             {/* </div> */}
             <div className='details__links'></div>
