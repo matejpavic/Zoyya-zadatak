@@ -10,6 +10,7 @@ function LocationItem({ name, address, imageUrl, category }) {
                 <div className='category'>{category}</div>
                 <div className='name'>{name}</div>
                 <div className='address'>{address}</div>
+                <div className='link'> {'->'} SEE LOCATION</div>
             </div>
         </div>
     );
