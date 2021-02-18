@@ -58,13 +58,22 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                 </div>
             {/* </div> */}
             <div className='details__links'>
-                <img src={facebookLogo}/>
-                <img src={instagramLogo}/>
+                <img src={facebookLogo} />
+                <img src={instagramLogo} />
             </div>
             <div className='details__team'>
                 <h3>Our team</h3>
-                <div>
-                    {}
+                <div className='members'>
+                    {
+                        selectedLocation.teamMembers.map(member => {
+                            return (
+                                    <div className='member'>
+                                        <div className='nickname' >{member.nickName}</div>
+                                        <div className='member-image' style={{backgroundImage: `url(${member.user.avatarUrl})`}} />
+                                    </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
             {/* <div>
