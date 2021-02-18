@@ -3,10 +3,9 @@ import './LocationDetail.scss';
 import facebookLogo from '../../assets/facebook.svg';
 import instagramLogo from '../../assets/instagram.svg';
 
-function LocationDetail({setSelectedLocation, selectedLocation}) {
+function LocationDetail({ selectedLocation }) {
     return (
         <div className='details'>
-            {/* <div className='details__heading'> */}
                 <div className='details__card'>
                     <div className='card-wrap'>
                         <h2>{selectedLocation.name}</h2>
@@ -16,9 +15,6 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                     </div>
                 </div>
                 <div className='details__image' style={{backgroundImage: `url(${selectedLocation.imageUrl})`}}/>
-            {/* </div> */}
-            {/* <div className='details__info'> */}
-                {/* <div className='details__contacts'> */}
                     <div className='details__about'>
                         <h3>About us</h3>
                         <div>{selectedLocation.description}</div>
@@ -29,7 +25,6 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                         <div><span style={{fontWeight: 'bold'}}>Cell: </span><span>{selectedLocation.phone}</span></div>
                         <div><span style={{fontWeight: 'bold'}}>Website: </span><span>https://www.zoyya.com/</span></div>
                     </div>
-                {/* </div> */}
                 <div className='details__working-hours'>
                     <h3>Working hours</h3>
                     <div>
@@ -56,7 +51,6 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                     }
                     </div>
                 </div>
-            {/* </div> */}
             <div className='details__links'>
                 <img src={facebookLogo} />
                 <img src={instagramLogo} />
@@ -67,21 +61,15 @@ function LocationDetail({setSelectedLocation, selectedLocation}) {
                     {
                         selectedLocation.teamMembers.map(member => {
                             return (
-                                    <div className='member'>
-                                        <div className='nickname' >{member.nickName}</div>
-                                        <div className='member-image' style={{backgroundImage: `url(${member.user.avatarUrl})`}} />
-                                    </div>
+                                <div className='member'>
+                                    <div className='nickname' >{member.nickName}</div>
+                                    <div className='member-image' style={{backgroundImage: `url(${member.user.avatarUrl})`}} />
+                                </div>
                             )
                         })
                     }
                 </div>
             </div>
-            {/* <div>
-                {selectedLocation.name}
-            </div>
-            {
-                <div onClick={()=>setSelectedLocation(null)}>{"<- BACK"}</div>
-            } */}
         </div>
     );
 }

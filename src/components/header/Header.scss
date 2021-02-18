@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  padding: 1%;
+  background-color: #faf9fd;
+  width: 100%;
+  img {
+    width: 10%;
+    height: auto;
+    margin-left: 0;
+    cursor: pointer;
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-right: 5%;
+    margin-left: auto;
+    .nav-item {
+      font-weight: bold;
+      white-space: nowrap;
+      margin-right: 5%;
+      cursor: pointer;
+    }
+  }
+}
