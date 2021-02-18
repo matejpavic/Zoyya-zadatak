@@ -1,0 +1,105 @@
+.details {
+  margin: 3% 5% 0 5%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "card pic pic "
+    "about  about hours"
+    "contact contact hours"
+    "links links links"
+    "team team team";
+  grid-template-rows: 300px 200px 150px 100px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  &__card {
+    grid-area: card;
+    background-color: #f4f4ff;
+    margin-right: 3%;
+    .card-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 10% 10% 5% 10%;
+      height: 85%;
+      button {
+        width: 100%;
+        background-color: #6a4ee1;
+        margin: auto 0 10% 0;
+        height: 15%;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__image {
+    grid-area: pic;
+    background-size: cover;
+    background-position: center;
+  }
+  &__about {
+    grid-area: about;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+  }
+  &__contact-info {
+    grid-area: contact;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+  }
+  &__working-hours {
+    grid-area: hours;
+  }
+  &__links {
+    grid-area: links;
+    display: flex;
+    align-items: center;
+    padding-left: 2.5%;
+    img {
+      width: 5%;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  &__team {
+    grid-area: team;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .members {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      .member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .nickname {
+          font-weight: bold;
+        }
+        .member-image {
+          width: 50px;
+          height: 50px;
+          background-position: center;
+          background-size: cover;
+          border-radius: 50%;
+          margin-top: 15%;
+          border: 5px solid #eaf4ff;
+        }
+      }
+    }
+  }
+}
+
+.time {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15%;
+}
