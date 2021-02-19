@@ -9,7 +9,7 @@ function App() {
   const [selectedLocation, setSelectedLocation] = useState(null)
   return (
     <div className="App">
-      <Header />
+      <Header setSelectedLocation={setSelectedLocation} />
       {
         !selectedLocation ?
           <LocationList selectedLocation={selectedLocation} setSelectedLocation={setSelectedLocation} locations={locations}/>
